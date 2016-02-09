@@ -9,11 +9,30 @@ body{
     background-color: lightgray;
 }
 
-#mapNorway{
+#mapContainer{
     min-height: 100vh;
     height: 100vh;
     width: 100%;
+    padding: 5%;
     background-color: gray;
+}
+
+#mapFilter{
+    position: relative;
+    margin: 0 auto;
+    width: 250px;
+    height: 800px;
+    background-color: beige;
+    float: left;
+  
+}
+
+#mapNorway{
+    position: relative;
+    margin: 0 auto;
+    width: 800px;
+    height: 800px;
+    background-color: white;
 }
 
 #mapUtoya{
