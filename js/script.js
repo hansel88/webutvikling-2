@@ -17,5 +17,8 @@ var victims = { list: {
   },
 }};
 
+/*$( "#target" ).click(function() {
+  $("#mapUtoya")[0].scrollIntoView({block: "end", behavior: "smooth"});
+});*/
 
 })();
