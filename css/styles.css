@@ -17,7 +17,7 @@ body{
     min-height: 100vh;
     height: 100vh;
     width: 100%;
-    padding: 5%;
+    padding-top: 20px;
     background-color: gray;
 }
 
@@ -26,6 +26,7 @@ body{
     margin: 0 auto;
     width: 250px;
     height: 800px;
+    margin-left: 180px;
     background-color: beige;
     float: left;
   
@@ -38,6 +39,27 @@ body{
     height: 800px;
     background-color: white;
 }
+
+.imgWraps{
+    position: absolute;
+}
+
+#finnmarkWrap{
+    top: 20px;
+    left: 100px;
+}
+#imgFinnmark{
+    width: 50%;
+}
+
+#tromsWrap{
+    top: 250px;
+
+}
+#imgTroms{
+    width: 50%; 
+}
+
 
 #mapUtoya{
     min-height: 100vh;
