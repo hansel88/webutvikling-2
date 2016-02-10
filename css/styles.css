@@ -12,6 +12,19 @@ body{
     width: 100%;
     background-color: lightgray;
 }
+.marker{
+    border-radius: 50%;
+    background-color: black;
+    display: inline;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+
+#osloMarker{
+    top: 100px;
+    left: 100px;
+}
 
 #mapContainer{
     min-height: 100vh;
@@ -40,8 +53,9 @@ body{
     background-color: white;
 }
 
-img{
+#mapNorway img{
     position: absolute;
+    opacity: 0;
 }
 #imgFinnmark{
     top: 20px;
