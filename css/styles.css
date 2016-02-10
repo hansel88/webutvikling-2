@@ -46,18 +46,18 @@ body{
 
 #finnmarkWrap{
     top: 20px;
-    left: 700px;
+    left: 100px;
 }
 #imgFinnmark{
     width: 50%;
 }
 
 #tromsWrap{
-    top: 50px;
-    left: 450px;
+    top: 250px;
+
 }
 #imgTroms{
-    width: 10%; 
+    width: 50%; 
 }
 
 
