@@ -40,24 +40,84 @@ body{
     background-color: white;
 }
 
-.imgWraps{
+img{
     position: absolute;
 }
-
-#finnmarkWrap{
-    top: 20px;
-    left: 100px;
-}
 #imgFinnmark{
-    width: 50%;
+    top: 20px;
+    left: 600px;
 }
-
-#tromsWrap{
-    top: 250px;
-
+#imgTroms{ 
+    top: 79px;
+    left: 493px;
 }
-#imgTroms{
-    width: 50%; 
+#imgNordland{
+    top: 154px;
+    left: 413px;
+}
+#imgNord-Trondelag{
+    top: 360px;
+    left: 370px;
+}
+#imgSor-Trondelag{
+    top: 397px;
+    left: 325px;
+}
+#imgMore-Og-Romsdal{
+    top: 441px;
+    left: 248px;
+}
+#imgHedmark{
+    top: 488px;
+    left: 351px;
+}
+#imgOppland{
+    top: 500px;
+    left: 295px;
+}
+#imgSogn-Og-Fjordane{
+    top: 499px;
+    left: 221px;
+}
+#imgHordaland{
+    top: 565px;
+    left: 220px;
+}
+#imgAkershus{
+    top: 600px;
+    left: 365px;
+}
+#imgOstfold{
+    top: 643px;
+    left: 365px;
+}
+#imgBuskerud{
+    top: 567px;
+    left: 287px;
+}
+#imgRogaland{
+    top: 628px;
+    left: 219px;
+}
+#imgVest-Agder{
+    top: 663px;
+    left: 246px;
+}
+#imgAust-Agder{
+    top: 637px;
+    left: 265px;
+}
+#imgTelemark{
+    top: 615px;
+    left: 276px;
+}
+#imgVestfold{
+    top: 646px;
+    left: 342px;
+}
+#imgOslo{
+    top: 623px;
+    left: 364px;
 }
 
 
@@ -67,3 +127,27 @@ body{
     width: 100%;
     background-color: lightblue;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
