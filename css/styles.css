@@ -12,19 +12,6 @@ body{
     width: 100%;
     background-color: lightgray;
 }
-.marker{
-    border-radius: 50%;
-    background-color: black;
-    display: inline;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-}
-
-#osloMarker{
-    top: 100px;
-    left: 100px;
-}
 
 #mapContainer{
     min-height: 100vh;
@@ -45,6 +32,8 @@ body{
   
 }
 
+
+
 #mapNorway{
     position: relative;
     margin: 0 auto;
@@ -55,7 +44,7 @@ body{
 
 #mapNorway img{
     position: absolute;
-    opacity: 0;
+    opacity: 1;
 }
 #imgFinnmark{
     top: 20px;
@@ -132,6 +121,35 @@ body{
 #imgOslo{
     top: 623px;
     left: 364px;
+}
+
+
+
+.marker{
+    border-radius: 50%;
+    background-color: black;
+    display: inline;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 99; 
+}
+
+#akershusMarker{
+    top: 620px;
+    left: 376px;
+}
+#austAgderMarker{
+    top: 687px;
+    left: 290px;
+}
+#buskerudMarker{
+    top: 590px;
+    left: 307px;
+}
+#finnmarkMarker{
+    top: 110px;;
+    left: 650px;
 }
 
 
