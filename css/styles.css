@@ -29,10 +29,7 @@ body{
     margin-left: 180px;
     background-color: beige;
     float: left;
-  
 }
-
-
 
 #mapNorway{
     position: relative;
@@ -44,7 +41,7 @@ body{
 
 #mapNorway img{
     position: absolute;
-    opacity: 1;
+    opacity: 0;
 }
 #imgFinnmark{
     top: 20px;
@@ -132,16 +129,12 @@ body{
     position: absolute;
     width: 20px;
     height: 20px;
-    z-index: 99; 
+    z-index: 99;
+    opacity: 0.5;
 }
-
 #akershusMarker{
     top: 620px;
     left: 376px;
-}
-#austAgderMarker{
-    top: 687px;
-    left: 290px;
 }
 #buskerudMarker{
     top: 590px;
@@ -150,6 +143,82 @@ body{
 #finnmarkMarker{
     top: 110px;;
     left: 650px;
+}
+#hedmarkMarker{
+    top: 550px;
+    left: 390px;
+}
+#hordalandMarker{
+    top: 600px;
+    left: 260px;
+}
+#moreOgRomsdalMarker{
+    top: 490px;
+    left: 280px;
+}
+#nordTrondelagMarker{
+    top: 400px;
+    left: 410px;
+}
+#nordlandMarker{
+    top: 270px;
+    left: 468px;
+}
+#opplandMarker{
+    top: 540px;
+    left: 330px;
+}
+#osloMarker{
+    top: 622px;
+    left: 362px;
+}
+#ostfoldMarker{
+    top: 654px;
+    left: 373px;
+}
+#rogalandMarker{
+    top: 680px;
+    left: 232px;
+}
+#sognOgFjordaneMarker{
+    top: 530px;
+    left: 260px;
+}
+#sorTrondelagMarker{
+    top: 465px;
+    left: 370px;
+}
+#telemarkMarker{
+    top: 640px;
+    left: 300px;
+}
+#tromsMarker{
+    top: 150px;
+    left: 550px;
+}
+#vestAgderMarker{
+    top: 690px;
+    left: 257px;
+}
+#vestfoldMarker{
+    top: 657px;
+    left: 343px;
+}
+
+
+.city{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: white;
+    position: absolute;
+    display: inline;
+}
+
+#osloCity{
+    top: 626px;
+    left: 367px;
 }
 
 
