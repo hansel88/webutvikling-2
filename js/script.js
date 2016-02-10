@@ -94,6 +94,25 @@ var victims = { list: [
     "image"       : "../images/victims/test.jpg",
     "found"       : "Utøya"
   },
+  {
+    "name"        : "Andreas Dalby Grønnesby",
+    "city"        : "Stange",
+    "born"        : "",
+    "age"         : "17",
+    "description" : "Andreas Dalby var på Utøya for første gang. Han gikk på Hamar katedralskole."
+                    + "Han falt fra vestspissen av Utøya og ned i vannet." ,
+    "image"       : "../images/victims/anne-lise-holter.jpg",
+    "found"       : "Utøya"
+  },
+  {
+    "name"        : "Andreas Edvardsen",
+    "city"        : "Sarpsborg",
+    "born"        : "",
+    "age"         : "18",
+    "description" : "Andreas Edvardsen var styremedlem i Sarpsborg AUF og sosialpolitisk ansvarlig i AUFs fylkesstyre i Østfold. Han var også kandidat på"                         + " Sarpsborg Arbeiderpartis liste til kommunevalget. I mai var han russ ved St. Olav videregående skole i Sarpsborg.Han var på "                             + " Kjærlighetsstien på Utøya.",
+    "image"       : "../images/victims/test.jpg",
+    "found"       : "Utøya"
+  },
 ]};
 
 /*$( "#target" ).click(function() {
