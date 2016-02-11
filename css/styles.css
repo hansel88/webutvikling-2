@@ -24,12 +24,14 @@ body{
 #mapFilter{
     position: relative;
     margin: 0 auto;
-    width: 250px;
+    width: 350px;
     height: 800px;
     margin-left: 180px;
     background-color: beige;
     float: left;
 }
+
+
 
 #mapNorway{
     position: relative;
@@ -120,8 +122,6 @@ body{
     left: 364px;
 }
 
-
-
 .marker{
     border-radius: 50%;
     background-color: black;
@@ -132,6 +132,11 @@ body{
     z-index: 99;
     opacity: 0.5;
 }
+
+.marker:hover{
+    cursor: pointer;
+}
+
 #akershusMarker{
     top: 620px;
     left: 376px;
