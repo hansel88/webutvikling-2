@@ -11,7 +11,8 @@
     $("#ageSlider").rangeSlider({
       bounds: {min: 14, max: 70},
       step: 1,
-      defaultValues:{min: 14, max: 70}
+      defaultValues:{min: 14, max: 70},
+      arrows: false
     });
     
     var setEvents = function(){
@@ -46,7 +47,6 @@
     
     var updateAreas = function(){
         var location = $('#locationFilter').val();
-        console.log('dfdsf');
         
         $( ".marker" ).each(function( index ) {
             var count = 0;
