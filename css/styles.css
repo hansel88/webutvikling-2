@@ -43,7 +43,7 @@ body{
 
 #mapNorway img{
     position: absolute;
-    opacity: 0;
+    opacity: 1;
 }
 #imgFinnmark{
     top: 20px;
@@ -220,11 +220,111 @@ body{
     position: absolute;
     display: inline;
 }
-
 #osloCity{
     top: 626px;
     left: 367px;
 }
+#kirkenesCity{
+    top: 75px;
+    left: 745px;
+}
+#altaCity{
+    top: 95px;
+    left: 640px;
+}
+#hammerfestCity{
+    top: 55px;
+    left: 642px;
+}
+#tromsoCity{
+    top: 113px;
+    left: 565px;
+}
+#harstadCity{
+    top: 160px;
+    left: 510px;
+}
+#narvikCity{
+    top: 190px;
+    left: 520px;
+}
+#bodoCity{
+    top: 240px;
+    left: 476px;
+}
+#moIranaCity{
+    top: 300px;
+    left: 460px;
+}
+#namsosCity{
+    top: 400px;
+    left: 400px;
+}
+#trondheimCity{
+    top: 450px;
+    left: 380px;
+}
+#kristiansundCity{
+    top: 450px;
+    left: 340px;
+}
+#rorosCity{
+    top: 482px;
+    left: 396px;
+}
+#moldeCity{
+    top: 470px;
+    left: 294px;
+}
+#aalesundCity{
+    top: 482px;
+    left: 270px;
+}
+#stavangerCity{
+    top: 670px;
+    left: 230px;
+}
+#bergenCity{
+    top: 594px;
+    left: 232px;
+}
+#haugesundCity{
+    top: 634px;
+    left: 226px;
+}
+#kristiansandCity{
+    top: 716px;
+    left: 282px;
+}
+#tonsbergCity{
+    top: 663px;
+    left: 355px;
+}
+#arendalCity{
+    top: 700px;
+    left: 310px;
+}
+#mossCity{
+    top: 658px;
+    left: 366px;
+}
+#drammenCity{
+    top: 640px;
+    left: 356px;
+}
+#lillehammerCity{
+    top: 570px;
+    left: 360px;
+}
+#hamarCity{
+    top: 590px;
+    left: 380px;
+}
+#fredrikstadCity{
+    top: 668px;
+    left: 370px;
+}
+
 
 
 #mapUtoya{
