@@ -672,7 +672,7 @@ var victims = { list: [
     "area"        : "finnmark",
     "born"        : "",
     "age"         : 16,
-    "description" : "Steinar Jessen fra Alta beskrives av kjente som en sosial gutt, og i Alta AUF var han en kjerne. Steinar var også en ivrig svømmer.
+    "description" : "Steinar Jessen fra Alta beskrives av kjente som en sosial gutt, og i Alta AUF var han en kjerne. Steinar var også en ivrig svømmer."
                     + " Han var ved utescenen utenfor Kafébygget på Utøya.",
     "image"       : "../images/victims/anne-lise-holter.jpg",
     "found"       : "utoya"

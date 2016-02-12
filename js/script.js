@@ -55,8 +55,6 @@
             for(var i = 0; i < victims.list.length; i++ ){
                 if(area.toLowerCase().indexOf(victims.list[i].area) > -1){
                     if(fromAge <= victims.list[i].age && toAge >= victims.list[i].age){ //Checking age
-                        console.log(fromAge <= victims.list[i].age );
-                        console.log(toAge >= victims.list[i].age);
                         if(location == 'all' || (location == victims.list[i].found)) //Check utøya/regjeringskvartalet
                         {
                                 count++;
