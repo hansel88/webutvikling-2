@@ -11,7 +11,8 @@
     $("#ageSlider").rangeSlider({
       bounds: {min: 14, max: 70},
       step: 1,
-      defaultValues:{min: 14, max: 70}
+      defaultValues:{min: 14, max: 70},
+      arrows: false
     });
     
     var setEvents = function(){
@@ -46,7 +47,6 @@
     
     var updateAreas = function(){
         var location = $('#locationFilter').val();
-        console.log('dfdsf');
         
         $( ".marker" ).each(function( index ) {
             var count = 0;
@@ -55,6 +55,8 @@
             for(var i = 0; i < victims.list.length; i++ ){
                 if(area.toLowerCase().indexOf(victims.list[i].area) > -1){
                     if(fromAge <= victims.list[i].age && toAge >= victims.list[i].age){ //Checking age
+                        console.log(fromAge <= victims.list[i].age );
+                        console.log(toAge >= victims.list[i].age);
                         if(location == 'all' || (location == victims.list[i].found)) //Check utøya/regjeringskvartalet
                         {
                                 count++;
