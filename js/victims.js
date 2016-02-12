@@ -231,5 +231,88 @@ var victims = { list: [
     "image"       : "../images/victims/test.jpg",
     "found"       : "utoya"
   },
+  {
+    "name"        : "Emil Okkenhaug",
+    "city"        : "Levanger",
+    "area"        : "niord-trondelag",
+    "born"        : "",
+    "age"         : "15",
+    "description" : "Emil Okkenhaug meldte seg inn i AUF våren 2011 og var på Utøya for første gang. Han var en aktiv, sosial og godt likt idrettsgutt. Samme "                   + "høst skulle han begynne på Levanger videregående skole. "
+                    + "Han var i området ved Pumpehuset på Utøya.",
+    "image"       : "../images/victims/anne-lise-holter.jpg",
+    "found"       : "utoya"
+  },
+  {
+    "name"        : "Espen Jørgensen",
+    "city"        : "Bodø",
+    "area"        : "nordland",
+    "born"        : "",
+    "age"         : "17",
+    "description" : "Espen Jørgensen var nylig blitt leder i Bodø AUF. Han var også innvalgt som 1. vara i Nordland AUFs styre. En venn beskriver ham på "                        + "følgende måte: ’Han kunne lyse opp de mørkeste dager, og var en person man kunne stole fullt på.’ Espen gikk på teknikk og industriell "                  + "produksjon i 1. klasse ved Bodø videregående skole. Han var i området ved Pumpehuset på Utøya.",
+    "image"       : "../images/victims/test.jpg",
+    "found"       : "utoya"
+  },
+  {
+    "name"        : "Eva Kathinka Lütken",
+    "city"        : "Sarpsborg",
+    "area"        : "ostfold",
+    "born"        : "",
+    "age"         : "17",
+    "description" : "Eva Kathinka Lütken fra Sarpsborg ble drept på Utøya. Hun gikk på St. Olav videregående skole, og var svært aktiv i sitt verv som"                           + " styremedlem i AUF i Sarpsborg. Hun var på Kjærlighetsstien på Utøya.",
+    "image"       : "../images/victims/anne-lise-holter.jpg",
+    "found"       : "utoya"
+  },
+  {
+    "name"        : "Even Flugstad Malmedal",
+    "city"        : "Gjøvik",
+    "area"        : "oppland",
+    "born"        : "",
+    "age"         : "18",
+    "description" : "Even Flugstad Malmedal var på Utøya for AUF. Han gikk på Gjøvik videregående skole og var i tillegg en aktiv fotballspiller og skiløper. Av"                  + " venner beskrives han som en gutt som alltid var i godt humør, som alltid stilte opp og som var godt likt av alle. "
+                     + "Han var ved Stoltenberget nord på Utøya.",
+    "image"       : "../images/victims/test.jpg",
+    "found"       : "utoya"
+  },
+  {
+    "name"        : "Eva Kathinka Lütken",
+    "city"        : "Sarpsborg",
+    "area"        : "ostfold",
+    "born"        : "",
+    "age"         : "17",
+    "description" : "Eva Kathinka Lütken fra Sarpsborg ble drept på Utøya. Hun gikk på St. Olav videregående skole, og var svært aktiv i sitt verv som"                            + " styremedlem i AUF i Sarpsborg. Hun var på Kjærlighetsstien på Utøya.",
+    "image"       : "../images/victims/anne-lise-holter.jpg",
+    "found"       : "utoya"
+  },
+  {
+    "name"        : "Even Flugstad Malmedal",
+    "city"        : "Gjøvik",
+    "area"        : "oppland",
+    "born"        : "",
+    "age"         : "18",
+    "description" : "Even Flugstad Malmedal var på Utøya for AUF. Han gikk på Gjøvik videregående skole og var i tillegg en aktiv fotballspiller og skiløper. Av"                  + " venner beskrives han som en gutt som alltid var i godt humør, som alltid stilte opp og som var godt likt av alle. "
+                     + "Han var ved Stoltenberget nord på Utøya.",
+    "image"       : "../images/victims/test.jpg",
+    "found"       : "utoya"
+  },
+  {
+    "name"        : "Fredrik Lund Schjetne",
+    "city"        : "Eidsvoll",
+    "area"        : "Akershus",
+    "born"        : "",
+    "age"         : "18",
+    "description" : "Fredrik Schjetne mistet livet på Utøya. Av sine venner beskrives han som en flott person; en gutt med et stort, varmt smil som alltid stod"                  + " klar for å hjelpe andre. Han var en engasjert gutt, som alltid var klar for en diskusjon og som alltid var positiv."
+                     + " Han var ved Pumpehuset på Utøya.",
+    "image"       : "../images/victims/anne-lise-holter.jpg",
+    "found"       : "utoya"
+  },
+  {
+    "name"        : "Gizem Dogan",
+    "city"        : "Trondheim",
+    "area"        : "sor-trondelag",
+    "born"        : "",
+    "age"         : "17",
+    "description" : "Gizem Dogan var akkurat ferdig med første år med studiespesialisering ved Byåsen videregående skole i Trondheim. Hun blir beskrevet som en "                 + "aktiv og flink jente. Hun var i skogen øst for Skolestua på Utøya",
+    "found"       : "utoya"
+  },
 ]};
 
