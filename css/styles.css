@@ -43,7 +43,7 @@ body{
 
 #mapNorway img{
     position: absolute;
-    opacity: 1;
+    opacity: 0;
 }
 #imgFinnmark{
     top: 20px;
@@ -323,6 +323,10 @@ body{
 #fredrikstadCity{
     top: 668px;
     left: 370px;
+}
+#bronnoysundCity{
+    top: 344px;
+    left: 420px;
 }
 
 
