@@ -43,7 +43,7 @@ body{
 
 #mapNorway img{
     position: absolute;
-    opacity: 0;
+    opacity: 1;
 }
 #imgFinnmark{
     top: 20px;
@@ -331,6 +331,10 @@ body{
 #bronnoysundCity{
     top: 344px;
     left: 420px;
+}
+
+.city:hover{
+    cursor: pointer;
 }
 
 
