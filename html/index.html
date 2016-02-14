@@ -13,28 +13,39 @@
 <body>  
    <container>
        <div id="intro">
-           
+           <div id="introTextContainer">
+               <h2>22072011 = 77 ≈ Norge.</h2>
+               <p>
+                   22. juli 2011 var en svært mørk dag for Norge. Mange 
+                    liv ble unødvendig tapt, og disse må vi absolutt ikke 
+                    glemme. Det var en dag som førte norge sammen, og 
+                    sammen former våre tapte landet
+               </p>
+           </div>
        </div>
        
-       
        <div id="mapContainer">
-            <div id="mapFilter">
-                <select id="locationFilter">
-                  <option value="utoya">Utøya</option>
-                  <option value="oslo">Regjeringskvartalet</option>
-                    <option value="all">Alle</option>
-                </select>
-
-            </div>
             
             <div id="mapNorway">
+                <div id="mapFilter">
+                    <div id="ageSlider"></div>
+                    <select id="locationFilter">
+                      <option value="utoya">Utøya</option>
+                      <option value="oslo">Regjeringskvartalet</option>
+                        <option value="all">Alle</option>
+                    </select>
+                </div>
+                
+                <div id="infoText">
+                    <h3>Norge</h3>
+                    <p>77 omkomne</p>
+                </div>
 
-                <div id="ageSlider"></div>
 
                 <div id="akershusMarker" class="marker"></div>
                 <img id="imgAkershus" src="../img/Fylker/akershus.png" alt="Akershus Fylke"></img>
            
-                <div id="aust-agderMarker" class=""></div>
+                <div id="aust-agderMarker" class="marker"></div>
                 <img id="imgAust-Agder" src="../img/Fylker/aust-agder.png" alt="Aust-agder Fylke"></img>
        
                 <div id="buskerudMarker" class="marker"></div>
@@ -116,16 +127,9 @@
                 <div id="haugesundCity" class="city" title="Haugesund"></div>
                 <div id="mossCity" class="city" title="Moss"></div>
                 <div id="bronnoysundCity" class="city" title="Brønnøysund"></div>
-             
-
             </div>
        </div>
        
-       
-       <div id="mapUtoya">
-           
-           
-       </div>
    </container>
     
     <script src="../js/victims.js"></script>
