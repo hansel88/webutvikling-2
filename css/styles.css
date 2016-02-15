@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    font-family: "source-sans-pro", Helvetica, sans-serif;
 }
 
 #intro{
@@ -10,13 +11,14 @@ body{
     min-height: 100vh;
     height: 100vh;
     width: 100%;
-    background-color: #20216B;
+    background-color: #1a2239;
     color: white;
     display: flex;
     align-items: center;
 }
 
 #introTextContainer{
+    font-family: "source-sans-pro";
     margin: 0 auto;
     width: 300px;
     line-height: 1.3;
@@ -32,12 +34,14 @@ body{
     font-size: 1.2em;
 }
 
-#mapContainer{
+#mapContainer{    
+    display: flex;
+    align-items: center;
     min-height: 100vh;
     height: 100vh;
     width: 100%;
     padding-top: 20px;
-    background-color: #20216B;
+    background-color: #1a2239;
     color: white;
 }
 
@@ -48,6 +52,41 @@ body{
     margin: 0 auto;
     width: 300px;
     float:left;
+}
+
+/* age slider customization */
+.ui-rangeSlider .ui-rangeSlider-innerBar{
+    height: 3px !important;
+}
+.ui-rangeSlider .ui-rangeSlider-bar{
+    height: 1px !important;
+}
+.ui-rangeSlider .ui-rangeSlider-handle{
+    height: 12px !important;
+    width: 12px !important;
+    border-radius: 50%;
+    background-color: white !important;
+    border: 2px solid #1a2239;
+    box-sizing: border-box !important;
+    margin-top: -1px;
+}
+
+.ui-rangeSlider .ui-rangeSlider-handle:hover, .ui-rangeSlider-label-value:hover, .ui-rangeSlider-label:hover{
+    cursor: pointer;
+}
+
+.ui-rangeSlider-label{
+    display: none !important;
+}
+
+#ageSliderText{
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.checkboxLabel:hover{
+    cursor: pointer;
 }
 
 #infoText{
@@ -62,7 +101,7 @@ body{
     margin: 0 auto;
     width: 800px;
     height: 800px;
-    background-color: #20216B;
+    background-color: #1a2239;
 }
 
 #mapNorway img{
