@@ -40,6 +40,13 @@
     
     var setEvents = function(){
         
+
+             $('#closeVictimDiv').on('click', function (e,data) {
+                //TODO get area
+                $( '#victimsDiv' ).animate({"height" : "0px"}, 400).hide(0);
+                //$('#victimsDiv').show().delay(400).hide();
+            });
+        
         $( ".marker" ).each(function( index ) {
             $( this ).mouseenter(function() {
                 
