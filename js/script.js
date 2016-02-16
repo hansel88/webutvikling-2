@@ -44,7 +44,6 @@
              $('#closeVictimDiv').on('click', function (e,data) {
                 //TODO get area
                 $( '#victimsDiv' ).animate({"height" : "0px"}, 400).hide(0);
-                //$('#victimsDiv').show().delay(400).hide();
             });
         
         $( ".marker" ).each(function( index ) {
@@ -61,9 +60,7 @@
                         $('#infoText').html('<h3>'+  areas[i].area +'</h3><p>' + areas[i].deadCount + ' omkomne</p>');
                     }
                 }
-                
             });
-          
 
             $( this ).mouseleave(function() {
                $(this).next().css({"opacity" : 0});
@@ -75,7 +72,6 @@
                 $( '#victimsDiv' ).animate({"height" : "300px"}, 400);
                 $('#victimsDiv').show();
             });
-        
             
             $('#ageSlider').off().on('valuesChanged', function (e,data) {
                 fromAge = data.values.min;
@@ -87,10 +83,8 @@
             $("#ageSlider").bind("valuesChanging", function(e, data){
               fromAge = data.values.min;
                 toAge = data.values.max;
-                //updateAreas();
                 $('#ageSliderText').html(fromAge + ' - ' + toAge + ' år');
             });
-
             
             $('#osloCheckbox').off().on('change', function (e) {
                 updateAreas();
