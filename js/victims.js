@@ -472,7 +472,7 @@ var victims = { list: [
     "born"        : "",
     "age"         : 15,
     "description" : "Lejla Selaci overtok som leder i Fredrikstad AUF i mars. Hun var en jente som engasjerte seg sterkt i det hun trodde på, og var også aktiv i                   ungdommens fylkesråd. Hun var elev ved Frederik II videregående skole i Fredrikstad. Hun var foran Kafébygget på Utøya.",
-    "image"       : "../img/omkomne/anne-lise-holter.jpg",
+    "image"       : "../img/omkomne/LejlaSelaci.jpg",
     "found"       : "utoya"
   },
   {
