@@ -62,6 +62,12 @@
                $(this).next().css({"opacity" : 0});
                 //$('#infoText').html('<h3>Norge</h3><p>77 omkomne</p>');
             });
+            
+            $(this).on('click', function (e,data) {
+                //TODO get area
+                $( '#victimsDiv' ).animate({"height" : "300px"}, 400);
+                $('#victimsDiv').show();
+            });
         
             
             $('#ageSlider').off().on('valuesChanged', function (e,data) {
