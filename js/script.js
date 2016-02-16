@@ -1,9 +1,8 @@
 (function () {
     
-    'use strict';
-    
     var fromAge = 14;
     var toAge = 70;
+    var detailsDivOpen = false;
 
     //This is only needed if infoText should not take filtering into account 
     var areas = [
@@ -37,14 +36,28 @@
       defaultValues:{min: 14, max: 70},
       arrows: false
     });
+
+    showVictimDetails = function(victim){
+        alert(victim);
+    };
     
     var setEvents = function(){
         
 
-             $('#closeVictimDiv').on('click', function (e,data) {
-                //TODO get area
+        $('#closeVictimDiv').on('click', function (e,data) {
+            $( '#victimsDiv' ).animate({"height" : "0px"}, 400).hide(0);
+            detailsDivOpen = false;
+        });
+
+        $('#mapContainer').on('click', function (e,data) {
+            if(!$(e.target).hasClass('marker') && !$(e.target).hasClass('victim') && !$(e.target).is('#clickPreventionOverlay') && !$(e.target).is('#victimsList'))
+           {
+               if(detailsDivOpen){
                 $( '#victimsDiv' ).animate({"height" : "0px"}, 400).hide(0);
-            });
+                detailsDivOpen = false;
+            }               
+           }
+        });
         
         $( ".marker" ).each(function( index ) {
             $( this ).mouseenter(function() {
@@ -69,8 +82,39 @@
             
             $(this).on('click', function (e,data) {
                 //TODO get area
-                $( '#victimsDiv' ).animate({"height" : "300px"}, 400);
-                $('#victimsDiv').show();
+                var area = $( this ).attr('id');
+                var areaName = '';
+
+                for(var j = 0; j < areas.length; j++){
+                    if(area.indexOf(areas[j].tag) > -1){
+                         areaName = areas[j].area;
+                    }
+                }
+
+                var victimsInArea = [];
+                for(var i = 0; i < victims.list.length; i++){
+                    if(area.indexOf(victims.list[i].area) > -1){
+                        victimsInArea.push(victims.list[i]);
+                    }
+                }
+
+                var listHtml = '<ul>';
+                for(var k = 0; k < victimsInArea.length; k++){
+                    //listHtml += '<li class="victim" onclick="showVictimDetails(' + '"' + victimsInArea[k].name + '"' + ');">' + victimsInArea[k].name + '</li>'; 
+                    var element = '<li class="victim">' + victimsInArea[k].name + '</li>'; 
+                    element.click(function() {
+                      alert('dsfsdfsdfsd');
+                    });
+                } 
+                listHtml += '</ul>'
+
+                $('#victimsList').html(
+                    '<h3>' + areaName + '</h3>' + listHtml
+                    );
+
+                $( '#victimsDiv' ).animate({"height" : "350px"}, 400);
+                $('#victimsDiv').show().delay(500);
+                detailsDivOpen = true;
             });
             
             $('#ageSlider').off().on('valuesChanged', function (e,data) {
