@@ -87,7 +87,7 @@
             $("#ageSlider").bind("valuesChanging", function(e, data){
               fromAge = data.values.min;
                 toAge = data.values.max;
-                updateAreas();
+                //updateAreas();
                 $('#ageSliderText').html(fromAge + ' - ' + toAge + ' år');
             });
 
