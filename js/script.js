@@ -10,24 +10,22 @@
         {"area": "Troms", "tag": "troms", "deadCount": 3},
         {"area": "Nord-trøndelag", "tag": "nord-trondelag", "deadCount": 3},
         {"area": "Sør-trøndelag", "tag": "sor-trondelag", "deadCount": 5},
-        {"area": "Møre og Romsdal", "tag": "more-og-romsdal", "deadCount": 3},
-        {"area": "Hedmark", "tag": "hedmark", "deadCount": 3},
+        {"area": "Møre og Romsdal", "tag": "more-og-romsdal", "deadCount": 2},
+        {"area": "Hedmark", "tag": "hedmark", "deadCount": 2},
         {"area": "Oppland", "tag": "oppland", "deadCount": 3},
         {"area": "Sogn og fjordane", "tag": "sogn-og-fjordane", "deadCount": 1},
         {"area": "Hordaland", "tag": "hordaland", "deadCount": 5},
         {"area": "Akershus", "tag": "akershus", "deadCount": 7},
-        {"area": "Østfold", "tag": "ostfold", "deadCount": 8},
+        {"area": "Østfold", "tag": "ostfold", "deadCount": 7},
         {"area": "Buskerud", "tag": "buskerud", "deadCount": 5},
         {"area": "Rogaland", "tag": "rogaland", "deadCount": 3},
-        {"area": "Vest-Agder", "tag": "vest-agder", "deadCount": 3},
-        {"area": "Aust-Agder", "tag": "aust-agder", "deadCount": 1},
+        {"area": "Vest-Agder", "tag": "vest-agder", "deadCount": 2},
+        {"area": "Aust-Agder", "tag": "aust-agder", "deadCount": 0},
         {"area": "Telemark", "tag": "telemark", "deadCount": 2},
         {"area": "Vestfold", "tag": "vestfold", "deadCount": 3},
         {"area": "Oslo", "tag": "oslo", "deadCount": 11},
         {"area": "Nordland", "tag": "nordland", "deadCount": 5}
     ]
-
-    console.log(victims);
     
     //Setting up age slider
     $("#ageSlider").rangeSlider({
@@ -38,7 +36,15 @@
     });
 
     showVictimDetails = function(victim){
-        alert(victim);
+        victimDetails = {};
+        for(var i = 0; i < victims.list.length; i++){
+            if(victims.list[i].name == victim){
+                 $( '#victimImg' ).attr('src', victims.list[i].image);
+                 $( '#victimHeader' ).text(victims.list[i].name);
+                 $( '#victimMeta' ).text(victims.list[i].city + ', ' + victims.list[i].age + ' år gammel');
+                 $( '#victimText' ).text(victims.list[i].description);
+            }
+        }
     };
     
     var setEvents = function(){
@@ -65,11 +71,8 @@
                $(this).next().css({"opacity" : 1});
                 
                 var area = $( this ).attr('id');
-                console.log('area: ', area);
                 for(var i = 0; i < areas.length; i++){
-                    console.log(areas[i].tag)
                     if(area.indexOf(areas[i].tag) > -1){
-                        console.log('yay')
                         $('#infoText').html('<h3>'+  areas[i].area +'</h3><p>' + areas[i].deadCount + ' omkomne</p>');
                     }
                 }
@@ -81,9 +84,14 @@
             });
             
             $(this).on('click', function (e,data) {
-                //TODO get area
                 var area = $( this ).attr('id');
                 var areaName = '';
+
+                //Clear in case Aust-Agder (0 victims)
+                 $( '#victimImg' ).attr('src','');
+                 $( '#victimHeader' ).text('');
+                 $( '#victimMeta' ).text('');
+                 $( '#victimText' ).text('');
 
                 for(var j = 0; j < areas.length; j++){
                     if(area.indexOf(areas[j].tag) > -1){
@@ -98,21 +106,24 @@
                     }
                 }
 
-                var listHtml = '<ul>';
+               var listHtml = '<ul>'
                 for(var k = 0; k < victimsInArea.length; k++){
-                    //listHtml += '<li class="victim" onclick="showVictimDetails(' + '"' + victimsInArea[k].name + '"' + ');">' + victimsInArea[k].name + '</li>'; 
-                    var element = '<li class="victim">' + victimsInArea[k].name + '</li>'; 
-                    element.click(function() {
-                      alert('dsfsdfsdfsd');
-                    });
+                     listHtml += '<li class="victim" onclick="showVictimDetails(' + "'" + victimsInArea[k].name + "'" + ' );">' + victimsInArea[k].name + '</li>'; 
+                     if(k == 0){
+                        $( '#victimImg' ).attr('src', victimsInArea[k].image);
+                         $( '#victimHeader' ).text(victimsInArea[k].name);
+                         $( '#victimMeta' ).text(victimsInArea[k].city + ', ' + victimsInArea[k].age + ' år gammel');
+                         $( '#victimText' ).text(victimsInArea[k].description);
+                     }
                 } 
+
                 listHtml += '</ul>'
 
                 $('#victimsList').html(
-                    '<h3>' + areaName + '</h3>' + listHtml
-                    );
+                    '<h3 id="areaHeader">' + areaName + '</h3>' + listHtml
+                );
 
-                $( '#victimsDiv' ).animate({"height" : "350px"}, 400);
+                $( '#victimsDiv' ).animate({"height" : "380px"}, 400);
                 $('#victimsDiv').show().delay(500);
                 detailsDivOpen = true;
             });

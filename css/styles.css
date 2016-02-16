@@ -62,15 +62,17 @@ body{
 }
 
 #victimsList h3{
-    display: inline;
+
 }
 
 #victimsList ul{
     float: right;
 }
 
+
 #victimDetails{
     width: 40%;
+    min-height: 100%;
     display: inline;
     margin-left: 30px;
     float: left;
@@ -78,8 +80,24 @@ body{
 }
 
 #victimDetails img{
-    height: 180px;
-    width: 120px;
+    min-height: 100%;
+    width: 200px;
+    float: left;
+    margin-right: 20px;
+    padding: 3px;
+}
+
+#victimDetails h3{
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 3px;
+}
+#victimDetails h4{
+    padding: 3px;
+}
+
+#victimDetails p{
+    padding: 3px;
 }
 
 .victim:hover{
@@ -88,7 +106,7 @@ body{
 }
 
 .victim{
-    padding: 5px;
+    padding: 6px;
 }
 
 #mapContainer{    
