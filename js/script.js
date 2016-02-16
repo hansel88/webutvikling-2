@@ -84,6 +84,14 @@
                 $('#ageSliderText').html(fromAge + ' - ' + toAge + ' år');
             });
             
+            $("#ageSlider").bind("valuesChanging", function(e, data){
+              fromAge = data.values.min;
+                toAge = data.values.max;
+                updateAreas();
+                $('#ageSliderText').html(fromAge + ' - ' + toAge + ' år');
+            });
+
+            
             $('#osloCheckbox').off().on('change', function (e) {
                 updateAreas();
             });
