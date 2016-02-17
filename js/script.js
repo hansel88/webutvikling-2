@@ -35,7 +35,7 @@
       arrows: false
     });
 
-    //Open victim details view
+    //set victim details in view
     showVictimDetails = function(victim){
         victimDetails = {};
         for(var i = 0; i < victims.list.length; i++){
@@ -129,6 +129,7 @@
     
     var setEvents = function(){
 
+        //When user has scrolled to bottom, fire the animate function after a .5 second delay
         $(window).scroll(function() {
            if($(window).scrollTop() + $(window).height() == $(document).height()) {
             setTimeout(
@@ -139,7 +140,7 @@
            }
         });
 
-        //Scoll to bottom of page
+        //Scoll to bottom of page when arrow is clicked
         $('#scrollButton').on('click', function (e,data) {
               $("html, body").animate({ scrollTop: $(document).height() }, "slow");
               return false;
