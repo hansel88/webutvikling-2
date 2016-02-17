@@ -49,25 +49,80 @@
 
     animateCitiesAndAreas = function(){
         $( '#akershusMarker' ).animate({"top" : "620px", "left" : "376px"}, 2000);
-        $( '#aust-agderMarker' ).animate({"top" : "690px", "left" : "290px"}, 1000);
+        $( '#aust-agderMarker' ).animate({"top" : "690px", "left" : "290px"}, 1500);
         $( '#buskerudMarker' ).animate({"top" : "590px", "left" : "307px"}, 2000);
-        $( '#finnmarkMarker' ).animate({"top" : "110px", "left" : "650px"}, 1000);
+        $( '#finnmarkMarker' ).animate({"top" : "110px", "left" : "650px"}, 2000);
         $( '#hedmarkMarker' ).animate({"top" : "550px", "left" : "390px"}, 2000);
-        $( '#hordalandMarker' ).animate({"top" : "600px", "left" : "260px"}, 1000);
-        $( '#more-og-romsdalMarker' ).animate({"top" : "490px", "left" : "280px"}, 1000);
+        $( '#hordalandMarker' ).animate({"top" : "600px", "left" : "260px"}, 1500);
+        $( '#more-og-romsdalMarker' ).animate({"top" : "490px", "left" : "280px"}, 3000);
         $( '#nord-trondelagMarker' ).animate({"top" : "400px", "left" : "410px"}, 2000);
 
-        $( '#nordlandMarker' ).animate({"top" : "270px", "left" : "468px"}, 1000);
-        $( '#opplandMarker' ).animate({"top" : "540px", "left" : "330px"}, 2000);
-        $( '#osloMarker' ).animate({"top" : "622px", "left" : "362px"}, 1000);
+        $( '#nordlandMarker' ).animate({"top" : "270px", "left" : "468px"}, 2000);
+        $( '#opplandMarker' ).animate({"top" : "540px", "left" : "330px"}, 2500);
+        $( '#osloMarker' ).animate({"top" : "622px", "left" : "362px"}, 2000);
         $( '#ostfoldMarker' ).animate({"top" : "654px", "left" : "373px"}, 2000);
-        $( '#rogalandMarker' ).animate({"top" : "680px", "left" : "232px"}, 1000);
+        $( '#rogalandMarker' ).animate({"top" : "680px", "left" : "232px"}, 2000);
         $( '#sogn-og-fjordaneMarker' ).animate({"top" : "530px", "left" : "260px"}, 1000);
-        $( '#sor-trondelagMarker' ).animate({"top" : "465px", "left" : "370px"}, 2000);
+        $( '#sor-trondelagMarker' ).animate({"top" : "465px", "left" : "370px"}, 2500);
         $( '#telemarkMarker' ).animate({"top" : "640px", "left" : "300px"}, 2000);
         $( '#tromsMarker' ).animate({"top" : "150px", "left" : "550px"}, 2000);
         $( '#vest-agderMarker' ).animate({"top" : "690px", "left" : "257px"}, 2000);
-        $( '#vestfoldMarker' ).animate({"top" : "657pxpx", "left" : "343px"}, 1000);
+        $( '#vestfoldMarker' ).animate({"top" : "657px", "left" : "343px"}, 1500);
+
+        $( '#osloCity' ).animate({"top" : "626px", "left" : "367px"}, 1500);
+        $( '#kirkenesCity' ).animate({"top" : "75px", "left" : "745px"}, 3000);
+        $( '#altaCity' ).animate({"top" : "95px", "left" : "640px"}, 2000);
+
+        $( '#hammerfestCity' ).animate({"top" : "55px", "left" : "642px"}, 1500);
+        $( '#tromsoCity' ).animate({"top" : "113px", "left" : "565px"}, 3000);
+        $( '#harstadCity' ).animate({"top" : "160px", "left" : "510px"}, 2000);
+
+        $( '#narvikCity' ).animate({"top" : "190px", "left" : "520px"}, 1500);
+        $( '#bodoCity' ).animate({"top" : "240px", "left" : "476px"}, 3000);
+        $( '#moIranaCity' ).animate({"top" : "300px", "left" : "460px"}, 2000);
+
+        $( '#namsosCity' ).animate({"top" : "400px", "left" : "400px"}, 1500);
+        $( '#trondheimCity' ).animate({"top" : "450px", "left" : "380px"}, 3000);
+        $( '#kristiansundCity' ).animate({"top" : "450px", "left" : "340px"}, 2000);
+
+        $( '#rorosCity' ).animate({"top" : "482px", "left" : "396px"}, 1500);
+        $( '#moldeCity' ).animate({"top" : "470px", "left" : "294px"}, 3000);
+        $( '#aalesundCity' ).animate({"top" : "482px", "left" : "270px"}, 2000);
+
+        $( '#stavangerCity' ).animate({"top" : "670px", "left" : "230px"}, 1500);
+        $( '#bergenCity' ).animate({"top" : "594px", "left" : "232px"}, 3000);
+        $( '#haugesundCity' ).animate({"top" : "634px", "left" : "226px"}, 2000);
+
+        $( '#kristiansandCity' ).animate({"top" : "716px", "left" : "282px"}, 1500);
+        $( '#tonsbergCity' ).animate({"top" : "663px", "left" : "355px"}, 3000);
+        $( '#arendalCity' ).animate({"top" : "700px", "left" : "310px"}, 2000);
+
+        $( '#mossCity' ).animate({"top" : "658px", "left" : "366px"}, 1500);
+        $( '#drammenCity' ).animate({"top" : "640px", "left" : "356px"}, 3000);
+        $( '#lillehammerCity' ).animate({"top" : "570px", "left" : "360px"}, 2000);
+
+        $( '#hamarCity' ).animate({"top" : "590px", "left" : "380px"}, 1500);
+        $( '#fredrikstadCity' ).animate({"top" : "668px", "left" : "370px"}, 3000);
+        $( '#bronnoysundCity' ).animate({"top" : "344px", "left" : "420px"}, 2000);
+
+        $( '#askoyCity' ).animate({"top" : "585px", "left" : "225px"}, 1500);
+        $( '#kautokeinoCity' ).animate({"top" : "140px", "left" : "640px"}, 3000);
+        $( '#karasjokCity' ).animate({"top" : "100px", "left" : "680px"}, 2000);
+
+        $( '#mehamnCity' ).animate({"top" : "24px", "left" : "710px"}, 1500);
+        $( '#bardufossCity' ).animate({"top" : "160px", "left" : "570px"}, 3000);
+        $( '#reineCity' ).animate({"top" : "210px", "left" : "440px"}, 2000);
+
+        $( '#hattfjelldalCity' ).animate({"top" : "336px", "left" : "464px"}, 1500);
+        $( '#sorliCity' ).animate({"top" : "406px", "left" : "450px"}, 3000);
+        $( '#engerdalCity' ).animate({"top" : "540px", "left" : "406px"}, 2000);
+
+        $( '#lutnesCity' ).animate({"top" : "570px", "left" : "420px"}, 1500);
+        $( '#skotterudCity' ).animate({"top" : "620px", "left" : "410px"}, 3000);
+        $( '#maloyCity' ).animate({"top" : "510px", "left" : "236px"}, 2000);
+
+        $( '#hardbakkeCity' ).animate({"top" : "554px", "left" : "224px"}, 3000);
+        $( '#egersundCity' ).animate({"top" : "702px", "left" : "244px"}, 2000);
     }
     
     var setEvents = function(){

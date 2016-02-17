@@ -449,6 +449,173 @@ body{
 }
 
 #osloCity{
+    top: 126px;
+    left: 667px;
+}
+#kirkenesCity{
+    top: 575px;
+    left: 245px;
+}
+#altaCity{
+    top: 395px;
+    left: 40px;
+}
+#hammerfestCity{
+    top: 555px;
+    left: 742px;
+}
+#tromsoCity{
+    top: 613px;
+    left: 365px;
+}
+#harstadCity{
+    top: 60px;
+    left: 710px;
+}
+#narvikCity{
+    top: 490px;
+    left: 220px;
+}
+#bodoCity{
+    top: 540px;
+    left: 176px;
+}
+#moIranaCity{
+    top: 700px;
+    left: 760px;
+}
+#namsosCity{
+    top: 200px;
+    left: 600px;
+}
+#trondheimCity{
+    top: 450px;
+    left: 680px;
+}
+#kristiansundCity{
+    top: 250px;
+    left: 640px;
+}
+#rorosCity{
+    top: 182px;
+    left: 596px;
+}
+#moldeCity{
+    top: 770px;
+    left: 94px;
+}
+#aalesundCity{
+    top: 282px;
+    left: 670px;
+}
+#stavangerCity{
+    top: 70px;
+    left: 530px;
+}
+#bergenCity{
+    top: 94px;
+    left: 232px;
+}
+#haugesundCity{
+    top: 334px;
+    left: 626px;
+}
+#kristiansandCity{
+    top: 116px;
+    left: 582px;
+}
+#tonsbergCity{
+    top: 63px;
+    left: 555px;
+}
+#arendalCity{
+    top: 700px;
+    left: 310px;
+}
+#mossCity{
+    top: 358px;
+    left: 166px;
+}
+#drammenCity{
+    top: 340px;
+    left: 256px;
+}
+#lillehammerCity{
+    top: 270px;
+    left: 660px;
+}
+#hamarCity{
+    top: 290px;
+    left: 180px;
+}
+#fredrikstadCity{
+    top: 368px;
+    left: 370px;
+}
+#bronnoysundCity{
+    top: 244px;
+    left: 20px;
+}
+#askoyCity{
+    top: 185px;
+    left: 625px;
+}
+
+#kautokeinoCity{
+    top: 540px;
+    left: 40px;
+}
+#karasjokCity{
+    top: 100px;
+    left: 180px;
+}
+#mehamnCity{
+    top: 524px;
+    left: 110px;
+}
+#bardufossCity{
+    top: 560px;
+    left: 270px;
+}
+#reineCity{
+    top: 610px;
+    left: 40px;
+}
+#hattfjelldalCity{
+    top: 236px;
+    left: 764px;
+}
+#sorliCity{
+    top: 206px;
+    left: 150px;
+}
+#engerdalCity{
+    top: 740px;
+    left: 6px;
+}
+#lutnesCity{
+    top: 170px;
+    left: 220px;
+}
+#skotterudCity{
+    top: 450px;
+    left: 430px;
+}
+#maloyCity{
+    top: 210px;
+    left: 536px;
+}
+#hardbakkeCity{
+    top: 154px;
+    left: 224px;
+}
+#egersundCity{
+    top: 202px;
+    left: 544px;
+}
+
+/*
+#osloCity{
     top: 626px;
     left: 367px;
 }
@@ -613,6 +780,7 @@ body{
     top: 702px;
     left: 244px;
 }
+*/
 
 
 
