@@ -35,6 +35,7 @@
       arrows: false
     });
 
+    //Open victim details view
     showVictimDetails = function(victim){
         victimDetails = {};
         for(var i = 0; i < victims.list.length; i++){
@@ -47,6 +48,7 @@
         }
     };
 
+    //animate area markers and cities to their respecitive locations
     animateCitiesAndAreas = function(){
         $( '#akershusMarker' ).animate({"top" : "620px", "left" : "376px"}, 2000);
         $( '#aust-agderMarker' ).animate({"top" : "690px", "left" : "290px"}, 1500);
@@ -126,13 +128,30 @@
     }
     
     var setEvents = function(){
-        
 
-        $('#closeVictimDiv').on('click', function (e,data) {
-            $( '#victimsDiv' ).animate({"height" : "0px"}, 400).hide(0);
-            detailsDivOpen = false;
+        $(window).scroll(function() {
+           if($(window).scrollTop() + $(window).height() == $(document).height()) {
+            setTimeout(
+              function() 
+              {
+                 animateCitiesAndAreas();
+              }, 500);
+           }
         });
 
+        //Scoll to bottom of page
+        $('#scrollButton').on('click', function (e,data) {
+              $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+              return false;
+        });
+        
+        //Close detail view from button
+       /* $('#closeVictimDiv').on('click', function (e,data) {
+            $( '#victimsDiv' ).animate({"height" : "0px"}, 400).hide(0);
+            detailsDivOpen = false;
+        });*/
+
+        //Close detail view when clicking outside div (with a few exceptions, like area markers etc)
         $('#mapContainer').on('click', function (e,data) {
             if(!$(e.target).hasClass('marker') && !$(e.target).hasClass('victim') && !$(e.target).is('#clickPreventionOverlay') && !$(e.target).is('#victimsList'))
            {
@@ -143,6 +162,7 @@
            }
         });
         
+        //Adding all events for the area markers
         $( ".marker" ).each(function( index ) {
             $( this ).mouseenter(function() {
                 
@@ -231,6 +251,7 @@
         
     }
     
+    //Set size of area markers depending on how many victims they have in comparison to current filter
     var updateAreas = function(){
         var includeUtoya = $('#utoyaCheckbox').is(':checked');
         var includeOslo = $('#osloCheckbox').is(':checked'); 
@@ -253,7 +274,6 @@
     }
 
     setEvents();
-    animateCitiesAndAreas();
     updateAreas();
 
 })();
