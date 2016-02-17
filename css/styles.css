@@ -363,6 +363,11 @@ body{
     position: absolute;
     display: inline;
 }
+
+.city:hover{
+    cursor: pointer;
+}
+
 #osloCity{
     top: 626px;
     left: 367px;
@@ -471,10 +476,65 @@ body{
     top: 344px;
     left: 420px;
 }
-
-.city:hover{
-    cursor: pointer;
+#askoyCity{
+    top: 585px;
+    left: 225px;
 }
+
+#kautokeinoCity{
+    top: 140px;
+    left: 640px;
+}
+#karasjokCity{
+    top: 100px;
+    left: 680px;
+}
+#mehamnCity{
+    top: 24px;
+    left: 710px;
+}
+#bardufossCity{
+    top: 160px;
+    left: 570px;
+}
+#reineCity{
+    top: 210px;
+    left: 440px;
+}
+#hattfjelldalCity{
+    top: 336px;
+    left: 464px;
+}
+#sorliCity{
+    top: 406px;
+    left: 450px;
+}
+#engerdalCity{
+    top: 540px;
+    left: 406px;
+}
+#lutnesCity{
+    top: 570px;
+    left: 420px;
+}
+#skotterudCity{
+    top: 620px;
+    left: 410px;
+}
+#maloyCity{
+    top: 510px;
+    left: 236px;
+}
+#hardbakkeCity{
+    top: 554px;
+    left: 224px;
+}
+#egersundCity{
+    top: 702px;
+    left: 244px;
+}
+
+
 
 
 
