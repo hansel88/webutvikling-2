@@ -23,7 +23,7 @@
         {"area": "Aust-Agder", "tag": "aust-agder", "deadCount": 0},
         {"area": "Telemark", "tag": "telemark", "deadCount": 2},
         {"area": "Vestfold", "tag": "vestfold", "deadCount": 3},
-        {"area": "Oslo", "tag": "oslo", "deadCount": 11},
+        {"area": "Oslo", "tag": "oslo", "deadCount": 14},
         {"area": "Nordland", "tag": "nordland", "deadCount": 5}
     ]
     
@@ -46,6 +46,29 @@
             }
         }
     };
+
+    animateCitiesAndAreas = function(){
+        $( '#akershusMarker' ).animate({"top" : "620px", "left" : "376px"}, 2000);
+        $( '#aust-agderMarker' ).animate({"top" : "690px", "left" : "290px"}, 1000);
+        $( '#buskerudMarker' ).animate({"top" : "590px", "left" : "307px"}, 2000);
+        $( '#finnmarkMarker' ).animate({"top" : "110px", "left" : "650px"}, 1000);
+        $( '#hedmarkMarker' ).animate({"top" : "550px", "left" : "390px"}, 2000);
+        $( '#hordalandMarker' ).animate({"top" : "600px", "left" : "260px"}, 1000);
+        $( '#more-og-romsdalMarker' ).animate({"top" : "490px", "left" : "280px"}, 1000);
+        $( '#nord-trondelagMarker' ).animate({"top" : "400px", "left" : "410px"}, 2000);
+
+        $( '#nordlandMarker' ).animate({"top" : "270px", "left" : "468px"}, 1000);
+        $( '#opplandMarker' ).animate({"top" : "540px", "left" : "330px"}, 2000);
+        $( '#osloMarker' ).animate({"top" : "622px", "left" : "362px"}, 1000);
+        $( '#ostfoldMarker' ).animate({"top" : "654px", "left" : "373px"}, 2000);
+        $( '#rogalandMarker' ).animate({"top" : "680px", "left" : "232px"}, 1000);
+        $( '#sogn-og-fjordaneMarker' ).animate({"top" : "530px", "left" : "260px"}, 1000);
+        $( '#sor-trondelagMarker' ).animate({"top" : "465px", "left" : "370px"}, 2000);
+        $( '#telemarkMarker' ).animate({"top" : "640px", "left" : "300px"}, 2000);
+        $( '#tromsMarker' ).animate({"top" : "150px", "left" : "550px"}, 2000);
+        $( '#vest-agderMarker' ).animate({"top" : "690px", "left" : "257px"}, 2000);
+        $( '#vestfoldMarker' ).animate({"top" : "657pxpx", "left" : "343px"}, 1000);
+    }
     
     var setEvents = function(){
         
@@ -153,8 +176,6 @@
         
     }
     
-    setEvents();
-    
     var updateAreas = function(){
         var includeUtoya = $('#utoyaCheckbox').is(':checked');
         var includeOslo = $('#osloCheckbox').is(':checked'); 
@@ -175,7 +196,9 @@
             $( this ).animate({"width" : (6 + (2 * count)) + "px", "height" : (6 + (2 * count)) + "px"}, 500);
         });
     }
-    
+
+    setEvents();
+    animateCitiesAndAreas();
     updateAreas();
 
 })();

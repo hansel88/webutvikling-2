@@ -277,6 +277,85 @@ body{
 }
 
 #akershusMarker{
+    top: 60px;
+    left: 76px;
+}
+#aust-agderMarker{
+    top: 90px;
+    left: 390px;
+}
+#buskerudMarker{
+    top: 290px;
+    left: 7px;
+}
+#finnmarkMarker{
+    top: 610px;;
+    left: 350px;
+}
+#hedmarkMarker{
+    top: 250px;
+    left: 190px;
+}
+#hordalandMarker{
+    top: 100px;
+    left: 260px;
+}
+#more-og-romsdalMarker{
+    top: 90px;
+    left: 180px;
+}
+#nord-trondelagMarker{
+    top: 40px;
+    left: 10px;
+}
+#nordlandMarker{
+    top: 670px;
+    left: 68px;
+}
+#opplandMarker{
+    top: 240px;
+    left: 130px;
+}
+#osloMarker{
+    top: 122px;
+    left: 162px;
+}
+#ostfoldMarker{
+    top: 354px;
+    left: 173px;
+}
+#rogalandMarker{
+    top: 280px;
+    left: 332px;
+}
+#sogn-og-fjordaneMarker{
+    top: 630px;
+    left: 160px;
+}
+#sor-trondelagMarker{
+    top: 165px;
+    left: 270px;
+}
+#telemarkMarker{
+    top: 140px;
+    left: 200px;
+}
+#tromsMarker{
+    top: 650px;
+    left: 50px;
+}
+#vest-agderMarker{
+    top: 90px;
+    left: 457px;
+}
+#vestfoldMarker{
+    top: 457px;
+    left: 43px;
+}
+
+
+/*
+#akershusMarker{
     top: 620px;
     left: 376px;
 }
@@ -352,6 +431,7 @@ body{
     top: 657px;
     left: 343px;
 }
+*/
 
 
 .city{
