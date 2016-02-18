@@ -271,7 +271,8 @@
                     }
                 }
             }
-            $( this ).animate({"width" : (6 + (2 * count)) + "px", "height" : (6 + (2 * count)) + "px"}, 500);
+            var scaling = 0.4 + count / 9;
+           $(this).css('transform', 'scale(' + scaling + ')');
         });
     }
 
