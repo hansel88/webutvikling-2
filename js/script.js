@@ -271,7 +271,7 @@
                     }
                 }
             }
-            var scaling = 0.4 + count / 9;
+            var scaling = 0.5 + count / 11;
            $(this).css('transform', 'scale(' + scaling + ')');
         });
     }

@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    font-family: "source-sans-pro", Helvetica, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 #intro{
@@ -19,7 +19,7 @@ body{
 }
 
 #introTextContainer{
-    font-family: "source-sans-pro";
+    font-family: 'Source Sans Pro', sans-serif;
     margin: 0 auto;
     width: 500px;
     line-height: 1.35;
@@ -36,7 +36,7 @@ body{
 #introTextContainer p{
     text-align: center;
     padding-bottom: 10px;
-    font-size: 1.4em;
+    font-size: 1.3em;
 }
 
 #scrollButton{
@@ -50,19 +50,22 @@ body{
 
 #scrollButton img{
     width: 20px;
-    padding: 0;
-    margin: 0;
 }
 
 #scrollButton:hover img{
-    background-image: url('../img/misc/arrow-down-fill.png');
-    background-size: 21px;
+    background-image: url('../img/misc/arrow-fill.png');
+    background-size: 20px;
+    cursor: pointer;
+}
+
+#scrollButton img:hover{
     cursor: pointer;
 }
 
 #scrollButton:hover,
 #scrollButton:active,
 #scrollButton:focus{
+    cursor: pointer;
     outline: none;
 }
 
@@ -170,7 +173,6 @@ body{
 }
 
 /* age slider customization */
-
 .ui-rangeSlider-container{
     width: 200px !important;
     display: inline;
@@ -219,12 +221,14 @@ body{
     cursor: pointer;
 }
 
-.checkboxLabel input{
+.checkboxLabel input[type="checkbox"]{
     background-color: black;
+    border-radius: 5px;
 }
 
 #infoText{
     position: absolute;
+    line-height: 1.35;
     top: 650px;
     left: 650px;
     width: 300px;
@@ -238,6 +242,7 @@ body{
     background-color: #1a2239;
 }
 
+/* areas (fylker) */
 #mapNorway img{
     position: absolute;
     opacity: 0;
@@ -338,7 +343,7 @@ body{
 }
 
 #akershusMarker{
-    top: 60px;
+    top: 160px;
     left: 76px;
 }
 #aust-agderMarker{
@@ -366,7 +371,7 @@ body{
     left: 180px;
 }
 #nord-trondelagMarker{
-    top: 40px;
+    top: 140px;
     left: 10px;
 }
 #nordlandMarker{
@@ -415,86 +420,7 @@ body{
 }
 
 
-/*
-#akershusMarker{
-    top: 620px;
-    left: 376px;
-}
-#aust-agderMarker{
-    top: 690px;
-    left: 290px;
-}
-#buskerudMarker{
-    top: 590px;
-    left: 307px;
-}
-#finnmarkMarker{
-    top: 110px;;
-    left: 650px;
-}
-#hedmarkMarker{
-    top: 550px;
-    left: 390px;
-}
-#hordalandMarker{
-    top: 600px;
-    left: 260px;
-}
-#more-og-romsdalMarker{
-    top: 490px;
-    left: 280px;
-}
-#nord-trondelagMarker{
-    top: 400px;
-    left: 410px;
-}
-#nordlandMarker{
-    top: 270px;
-    left: 468px;
-}
-#opplandMarker{
-    top: 540px;
-    left: 330px;
-}
-#osloMarker{
-    top: 622px;
-    left: 362px;
-}
-#ostfoldMarker{
-    top: 654px;
-    left: 373px;
-}
-#rogalandMarker{
-    top: 680px;
-    left: 232px;
-}
-#sogn-og-fjordaneMarker{
-    top: 530px;
-    left: 260px;
-}
-#sor-trondelagMarker{
-    top: 465px;
-    left: 370px;
-}
-#telemarkMarker{
-    top: 640px;
-    left: 300px;
-}
-#tromsMarker{
-    top: 150px;
-    left: 550px;
-}
-#vest-agderMarker{
-    top: 690px;
-    left: 257px;
-}
-#vestfoldMarker{
-    top: 657px;
-    left: 343px;
-}
-*/
-
-
+/* cities */
 .city{
     width: 5px;
     height: 5px;
@@ -590,8 +516,8 @@ body{
     left: 555px;
 }
 #arendalCity{
-    top: 700px;
-    left: 310px;
+    top: 300px;
+    left: 610px;
 }
 #mossCity{
     top: 358px;
@@ -674,197 +600,6 @@ body{
     top: 202px;
     left: 544px;
 }
-
-/*
-#osloCity{
-    top: 626px;
-    left: 367px;
-}
-#kirkenesCity{
-    top: 75px;
-    left: 745px;
-}
-#altaCity{
-    top: 95px;
-    left: 640px;
-}
-#hammerfestCity{
-    top: 55px;
-    left: 642px;
-}
-#tromsoCity{
-    top: 113px;
-    left: 565px;
-}
-#harstadCity{
-    top: 160px;
-    left: 510px;
-}
-#narvikCity{
-    top: 190px;
-    left: 520px;
-}
-#bodoCity{
-    top: 240px;
-    left: 476px;
-}
-#moIranaCity{
-    top: 300px;
-    left: 460px;
-}
-#namsosCity{
-    top: 400px;
-    left: 400px;
-}
-#trondheimCity{
-    top: 450px;
-    left: 380px;
-}
-#kristiansundCity{
-    top: 450px;
-    left: 340px;
-}
-#rorosCity{
-    top: 482px;
-    left: 396px;
-}
-#moldeCity{
-    top: 470px;
-    left: 294px;
-}
-#aalesundCity{
-    top: 482px;
-    left: 270px;
-}
-#stavangerCity{
-    top: 670px;
-    left: 230px;
-}
-#bergenCity{
-    top: 594px;
-    left: 232px;
-}
-#haugesundCity{
-    top: 634px;
-    left: 226px;
-}
-#kristiansandCity{
-    top: 716px;
-    left: 282px;
-}
-#tonsbergCity{
-    top: 663px;
-    left: 355px;
-}
-#arendalCity{
-    top: 700px;
-    left: 310px;
-}
-#mossCity{
-    top: 658px;
-    left: 366px;
-}
-#drammenCity{
-    top: 640px;
-    left: 356px;
-}
-#lillehammerCity{
-    top: 570px;
-    left: 360px;
-}
-#hamarCity{
-    top: 590px;
-    left: 380px;
-}
-#fredrikstadCity{
-    top: 668px;
-    left: 370px;
-}
-#bronnoysundCity{
-    top: 344px;
-    left: 420px;
-}
-#askoyCity{
-    top: 585px;
-    left: 225px;
-}
-
-#kautokeinoCity{
-    top: 140px;
-    left: 640px;
-}
-#karasjokCity{
-    top: 100px;
-    left: 680px;
-}
-#mehamnCity{
-    top: 24px;
-    left: 710px;
-}
-#bardufossCity{
-    top: 160px;
-    left: 570px;
-}
-#reineCity{
-    top: 210px;
-    left: 440px;
-}
-#hattfjelldalCity{
-    top: 336px;
-    left: 464px;
-}
-#sorliCity{
-    top: 406px;
-    left: 450px;
-}
-#engerdalCity{
-    top: 540px;
-    left: 406px;
-}
-#lutnesCity{
-    top: 570px;
-    left: 420px;
-}
-#skotterudCity{
-    top: 620px;
-    left: 410px;
-}
-#maloyCity{
-    top: 510px;
-    left: 236px;
-}
-#hardbakkeCity{
-    top: 554px;
-    left: 224px;
-}
-#egersundCity{
-    top: 702px;
-    left: 244px;
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
