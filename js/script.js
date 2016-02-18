@@ -179,7 +179,8 @@
 
             $( this ).mouseleave(function() {
                $(this).next().css({"opacity" : 0});
-                //$('#infoText').html('<h3>Norge</h3><p>77 omkomne</p>');
+                if (!detailsDivOpen)
+                    $('#infoText').html('<h3>Norge</h3><p>77 omkomne</p>');
             });
             
             $(this).on('click', function (e,data) {
@@ -222,7 +223,7 @@
                     '<h3 id="areaHeader">' + areaName + '</h3>' + listHtml
                 );
 
-                $( '#victimsDiv' ).animate({"height" : "380px"}, 400);
+                $( '#victimsDiv' ).animate({"height" : "400px"}, 400);
                 $('#victimsDiv').show().delay(500);
                 detailsDivOpen = true;
             });

@@ -52,9 +52,9 @@ body{
 
 #scrollButton:hover img{
     background-image: url('../img/misc/arrow-down-fill.png');
-    background-size: 30px;
+    background-size: 20px;
     cursor: pointer;
-}​
+}
 
 #scrollButton:hover,
 #scrollButton:active,
@@ -77,7 +77,7 @@ body{
     width: 100%;
     position: absolute;
     background-color: white;
-    z-index: 20;
+    z-index: 101;
     color: black;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -91,14 +91,15 @@ body{
 }
 
 #victimsList h3{
-    margin-left: 400px;
+    margin-left: 440px;
     font-size: 1.2em;
     font-weight: bold;
-    margin-bottom: 50px;
+
 }
 
 #victimsList ul{
     float: right;
+    margin-right: 50px;
 }
 
 
@@ -136,10 +137,11 @@ body{
 
 .victim:hover{
     cursor: pointer;
-    color: gray;
+    color: black;
 }
 
 .victim{
+    color: gray;
     padding: 6px;
 }
 
@@ -159,11 +161,16 @@ body{
     top: 50px;
     left: 0;
     margin: 0 auto;
-    width: 300px;
+    width: 200px;
     float:left;
 }
 
 /* age slider customization */
+
+.ui-rangeSlider-container{
+    width: 200px !important;
+    display: inline;
+}
 .ui-rangeSlider .ui-rangeSlider-innerBar{
     height: 3px !important;
 }
@@ -188,10 +195,20 @@ body{
     display: none !important;
 }
 
+#ageSlider{
+    width: 200px;
+    display: block;
+}
+
 #ageSliderText{
     text-align: center;
     margin: 0 auto;
     margin-bottom: 15px;
+}
+
+.checkboxLabel{
+    float: left;
+    width: 80px;
 }
 
 .checkboxLabel:hover{
