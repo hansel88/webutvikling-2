@@ -91,7 +91,10 @@ body{
 }
 
 #victimsList h3{
-
+    margin-left: 400px;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 50px;
 }
 
 #victimsList ul{
@@ -123,10 +126,12 @@ body{
 }
 #victimDetails h4{
     padding: 5px;
+    margin-top: 10px; 
 }
 
 #victimDetails p{
     padding: 5px;
+    margin-top: 20px;
 }
 
 .victim:hover{
