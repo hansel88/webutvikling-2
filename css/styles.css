@@ -200,13 +200,13 @@ body, html{
 }
 
 .ui-rangeSlider .ui-rangeSlider-handle{
-    height: 12px !important;
-    width: 12px !important;
+    height: 15px !important;
+    width: 15px !important;
     border-radius: 50%;
     background-color: white !important;
     border: 2px solid #1a2239;
     box-sizing: border-box !important;
-    margin-top: -1px;
+    margin-top: -3px;
 }
 
 .ui-rangeSlider .ui-rangeSlider-handle:hover, .ui-rangeSlider-label-value:hover, .ui-rangeSlider-label:hover{
@@ -232,17 +232,7 @@ body, html{
     position: absolute;
     left: 25px;
     top: 2px;
-    /*float: left;
-    width: 160px;
-    width: 160px;
-    display: block;
-    margin-bottom: 6px;*/
 }
-
-/*input[type=checkbox] {
-  margin-right: 8px;
-  cursor: pointer;
-}*/
 
 .checkboxLabel:hover{
     cursor: pointer;
@@ -623,13 +613,13 @@ body, html{
     left: 544px;
 }
 
-.squaredFour {
+.customCheckbox {
     width: 20px;    
     margin: 0px 10px 10px 0px;
     position: relative;
 }
 
-.squaredFour .cbl {
+.customCheckbox .cbl {
     cursor: pointer;
     position: absolute;
     width: 20px;
@@ -650,7 +640,7 @@ body, html{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
 }
 
-.squaredFour .cbl:after {
+.customCheckbox .cbl:after {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
     opacity: 0;
@@ -672,13 +662,13 @@ body, html{
     transform: rotate(-45deg);
 }
 
-.squaredFour .cbl:hover::after {
+.customCheckbox .cbl:hover::after {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
     filter: alpha(opacity=30);
     opacity: 0.5;
 }
 
-.squaredFour input[type=checkbox]:checked + .cbl:after {
+.customCheckbox input[type=checkbox]:checked + .cbl:after {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100);
     opacity: 1;
