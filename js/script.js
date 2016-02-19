@@ -212,6 +212,9 @@
                 } 
 
                 listHtml += '</ul>'
+                if(victimsInArea.length == 0){
+                    listHtml = '<p style="margin-left: 6px;">Ingen omkomne etter gitt filter</p>';
+                }
 
                 $('#victimsList').html(
                     '<div id="victimsListContainer"><h3 id="areaHeader">' + areaName + '</h3>' + listHtml + '</div>'
