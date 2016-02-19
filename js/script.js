@@ -6,21 +6,13 @@
     var detailsDivOpen = false;
     var areas = DATA_MODULE.areas;
     var victims = DATA_MODULE.victims;
-    
-    //Setting up age slider
-    $("#ageSlider").rangeSlider({
-      bounds: {min: 14, max: 61},
-      step: 1,
-      defaultValues:{min: 14, max: 61},
-      arrows: false
-    });
 
     //set victim details in view when a victim is clicked
     showVictimDetails = function(victim){
         victimDetails = {};
         for(var i = 0; i < victims.length; i++){
             if(victims[i].name == victim){
-                 $( '#victimImg' ).attr('src', victims[i].image);
+                 $( '#victimImg' ).attr('src', victims[i].image).attr('alt', victims[i].name);
                  $( '#victimHeader' ).text(victims[i].name);
                  $( '#victimMeta' ).text(victims[i].city + ', ' + victims[i].age + ' år gammel');
                  $( '#victimText' ).text(victims[i].description);
@@ -120,9 +112,18 @@
            }
         });
 
-        //Scoll to bottom of the page when arrow is clicked
+        //Set mapContainer to visible and scroll to bottom of the page when arrow is clicked
         $('#scrollButton').on('click', function (e,data) {
-              $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+            $("#mapContainer").css("display", "flex");
+            
+            //Setting up age slider, have to set it up after mapContainer is visible to avoid weird bugs 
+            $("#ageSlider").rangeSlider({
+              bounds: {min: 14, max: 61},
+              step: 1,
+              defaultValues:{min: 14, max: 61},
+              arrows: false
+            });
+            $("html, body").animate({ scrollTop: $(document).height() }, "slow");
               return false;
         });
         
@@ -202,7 +203,7 @@
                 for(var k = 0; k < victimsInArea.length; k++){
                      listHtml += '<li class="victim" onclick="showVictimDetails(' + "'" + victimsInArea[k].name + "'" + ' );">' + victimsInArea[k].name + '</li>'; 
                      if(k == 0){
-                        $( '#victimImg' ).attr('src', victimsInArea[k].image);
+                        $( '#victimImg' ).attr('src', victimsInArea[k].image).attr('alt', victimsInArea[k].name);
                          $( '#victimHeader' ).text(victimsInArea[k].name);
                          $( '#victimMeta' ).text(victimsInArea[k].city + ', ' + victimsInArea[k].age + ' år gammel');
                          $( '#victimText' ).text(victimsInArea[k].description);
