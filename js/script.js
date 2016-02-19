@@ -5,7 +5,7 @@
     var detailsDivOpen = false;
 
     //This is only needed if infoText should not take filtering into account 
-    var areas = [
+    /*var areas = [
         {"area": "Finnmark", "tag": "finnmark", "deadCount": 3},
         {"area": "Troms", "tag": "troms", "deadCount": 3},
         {"area": "Nord-trøndelag", "tag": "nord-trondelag", "deadCount": 3},
@@ -25,7 +25,10 @@
         {"area": "Vestfold", "tag": "vestfold", "deadCount": 3},
         {"area": "Oslo", "tag": "oslo", "deadCount": 14},
         {"area": "Nordland", "tag": "nordland", "deadCount": 5}
-    ]
+    ]*/
+    var areas = dataModule.areas;
+    var victims = dataModule.victims;
+    console.log(areas);
     
     //Setting up age slider
     $("#ageSlider").rangeSlider({
@@ -38,12 +41,12 @@
     //set victim details in view
     showVictimDetails = function(victim){
         victimDetails = {};
-        for(var i = 0; i < victims.list.length; i++){
-            if(victims.list[i].name == victim){
-                 $( '#victimImg' ).attr('src', victims.list[i].image);
-                 $( '#victimHeader' ).text(victims.list[i].name);
-                 $( '#victimMeta' ).text(victims.list[i].city + ', ' + victims.list[i].age + ' år gammel');
-                 $( '#victimText' ).text(victims.list[i].description);
+        for(var i = 0; i < victims.length; i++){
+            if(victims[i].name == victim){
+                 $( '#victimImg' ).attr('src', victims[i].image);
+                 $( '#victimHeader' ).text(victims[i].name);
+                 $( '#victimMeta' ).text(victims[i].city + ', ' + victims[i].age + ' år gammel');
+                 $( '#victimText' ).text(victims[i].description);
             }
         }
     };
@@ -200,9 +203,9 @@
                 }
 
                 var victimsInArea = [];
-                for(var i = 0; i < victims.list.length; i++){
-                    if(area.indexOf(victims.list[i].area) > -1){
-                        victimsInArea.push(victims.list[i]);
+                for(var i = 0; i < victims.length; i++){
+                    if(area.indexOf(victims[i].area) > -1){
+                        victimsInArea.push(victims[i]);
                     }
                 }
 
@@ -261,10 +264,10 @@
         $( ".marker" ).each(function( index ) {
             var count = 0;
             var area = $( this ).attr('id');
-            for(var i = 0; i < victims.list.length; i++ ){
-                if(area.toLowerCase().indexOf(victims.list[i].area) > -1){
-                    if(fromAge <= victims.list[i].age && toAge >= victims.list[i].age){ //Checking age
-                        if((includeOslo && ('oslo' == victims.list[i].found)) || (includeUtoya && ('utoya' == victims.list[i].found))) //Check utøya/regjeringskvartalet
+            for(var i = 0; i < victims.length; i++ ){
+                if(area.toLowerCase().indexOf(victims[i].area) > -1){
+                    if(fromAge <= victims[i].age && toAge >= victims[i].age){ //Checking age
+                        if((includeOslo && ('oslo' == victims[i].found)) || (includeUtoya && ('utoya' == victims[i].found))) //Check utøya/regjeringskvartalet
                         {
                                 count++;
                         }
