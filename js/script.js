@@ -174,6 +174,7 @@
 
                 //Clear in case Aust-Agder (0 victims)
                  $( '#victimImg' ).attr('src','');
+                $( '#victimImg' ).attr('alt','');
                  $( '#victimHeader' ).text('');
                  $( '#victimMeta' ).text('');
                  $( '#victimText' ).text('');

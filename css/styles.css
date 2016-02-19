@@ -20,7 +20,6 @@ body, html{
     margin: 0 auto;
     width: 500px;
     line-height: 1.35;
-    /*padding-top: 250px;*/
 }
 
 #introTextContainer h2{
@@ -159,7 +158,6 @@ body, html{
 }
 
 #mapContainer{    
-   /* display: flex; */
     display: none;
     align-items: center;
     min-height: 100vh;
