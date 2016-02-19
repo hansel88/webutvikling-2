@@ -163,9 +163,8 @@
                              count++;  
                         }
                     }
+                    $('#infoText').html('<h3>Norge</h3><p>' + count + ' omkomne mellom ' + fromAge + ' og ' + toAge + ' år som døde ' + getDeadLocationText() +'</p>');
                 }
-                
-                $('#infoText').html('<h3>Norge</h3><p>' + count + ' omkomne mellom ' + fromAge + ' og ' + toAge + ' år som døde ' + getDeadLocationText() +'</p>');
             });
             
             $(this).on('click', function (e,data) {
@@ -183,12 +182,19 @@
                          areaName = areas[j].area;
                     }
                 }
+                
+                var includeUtoya = $('#utoyaCheckbox').is(':checked');
+                var includeOslo = $('#osloCheckbox').is(':checked'); 
 
                 //Get list of victims in selected area
                 var victimsInArea = [];
                 for(var i = 0; i < victims.length; i++){
                     if(area.indexOf(victims[i].area) > -1){
-                        victimsInArea.push(victims[i]);
+                        if(fromAge <= victims[i].age && victims[i].age <= toAge){
+                            if((includeOslo && ('oslo' == victims[i].found)) || (includeUtoya && ('utoya' == victims[i].found))){
+                                victimsInArea.push(victims[i]);   
+                            }   
+                        }
                     }
                 }
 
