@@ -2,16 +2,16 @@
     
     //Setting up variables and data lists that we need
     var fromAge = 14;
-    var toAge = 70;
+    var toAge = 61;
     var detailsDivOpen = false;
     var areas = DATA_MODULE.areas;
     var victims = DATA_MODULE.victims;
     
     //Setting up age slider
     $("#ageSlider").rangeSlider({
-      bounds: {min: 14, max: 70},
+      bounds: {min: 14, max: 61},
       step: 1,
-      defaultValues:{min: 14, max: 70},
+      defaultValues:{min: 14, max: 61},
       arrows: false
     });
 
@@ -288,8 +288,11 @@
             else if(includeOslo){
                 deadLocationText = 'i regjeringskvartalet';
             }
-            else{
+            else if(includeUtoya){
                 deadLocationText = 'på Utøya';
+            }
+            else{
+                deadLocationText = 'hverken på Utøya eller i regjeringskvartalet'
             }
         return deadLocationText;
     }

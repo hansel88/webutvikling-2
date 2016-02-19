@@ -221,24 +221,26 @@ body, html{
 
 .checkboxLabel{
     float: left;
-    width: 80px;
+    width: 160px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+input[type=checkbox] {
+  margin-right: 8px;
+  cursor: pointer;
 }
 
 .checkboxLabel:hover{
     cursor: pointer;
 }
 
-.checkboxLabel input[type="checkbox"]{
-    background-color: black;
-    border-radius: 5px;
-}
-
 #infoText{
     position: absolute;
     line-height: 1.35;
     top: 650px;
-    left: 650px;
-    width: 300px;
+    left: 500px;
+    max-width: 290px;
 }
 
 #mapNorway{
@@ -374,11 +376,11 @@ body, html{
     left: 260px;
 }
 #more-og-romsdalMarker{
-    top: 90px;
+    top: 120px;
     left: 180px;
 }
 #nord-trondelagMarker{
-    top: 140px;
+    top: 160px;
     left: 10px;
 }
 #nordlandMarker{
@@ -390,7 +392,7 @@ body, html{
     left: 130px;
 }
 #osloMarker{
-    top: 122px;
+    top: 92px;
     left: 162px;
 }
 #ostfoldMarker{
