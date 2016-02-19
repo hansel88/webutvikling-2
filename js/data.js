@@ -1,5 +1,5 @@
     
-var dataModule = (function(){
+var DATA_MODULE = (function(){
         
      var areas = {list: [
         {"area": "Finnmark",         "tag": "finnmark",         "deadCount": 3},

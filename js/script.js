@@ -1,34 +1,11 @@
 (function () {
     
+    //Setting up variables and data lists that we need
     var fromAge = 14;
     var toAge = 70;
     var detailsDivOpen = false;
-
-    //This is only needed if infoText should not take filtering into account 
-    /*var areas = [
-        {"area": "Finnmark", "tag": "finnmark", "deadCount": 3},
-        {"area": "Troms", "tag": "troms", "deadCount": 3},
-        {"area": "Nord-trøndelag", "tag": "nord-trondelag", "deadCount": 3},
-        {"area": "Sør-trøndelag", "tag": "sor-trondelag", "deadCount": 5},
-        {"area": "Møre og Romsdal", "tag": "more-og-romsdal", "deadCount": 2},
-        {"area": "Hedmark", "tag": "hedmark", "deadCount": 2},
-        {"area": "Oppland", "tag": "oppland", "deadCount": 3},
-        {"area": "Sogn og fjordane", "tag": "sogn-og-fjordane", "deadCount": 1},
-        {"area": "Hordaland", "tag": "hordaland", "deadCount": 5},
-        {"area": "Akershus", "tag": "akershus", "deadCount": 7},
-        {"area": "Østfold", "tag": "ostfold", "deadCount": 7},
-        {"area": "Buskerud", "tag": "buskerud", "deadCount": 5},
-        {"area": "Rogaland", "tag": "rogaland", "deadCount": 3},
-        {"area": "Vest-Agder", "tag": "vest-agder", "deadCount": 2},
-        {"area": "Aust-Agder", "tag": "aust-agder", "deadCount": 0},
-        {"area": "Telemark", "tag": "telemark", "deadCount": 2},
-        {"area": "Vestfold", "tag": "vestfold", "deadCount": 3},
-        {"area": "Oslo", "tag": "oslo", "deadCount": 14},
-        {"area": "Nordland", "tag": "nordland", "deadCount": 5}
-    ]*/
-    var areas = dataModule.areas;
-    var victims = dataModule.victims;
-    console.log(areas);
+    var areas = DATA_MODULE.areas;
+    var victims = DATA_MODULE.victims;
     
     //Setting up age slider
     $("#ageSlider").rangeSlider({
@@ -38,7 +15,7 @@
       arrows: false
     });
 
-    //set victim details in view
+    //set victim details in view when a victim is clicked
     showVictimDetails = function(victim){
         victimDetails = {};
         for(var i = 0; i < victims.length; i++){
@@ -51,7 +28,7 @@
         }
     };
 
-    //animate area markers and cities to their respecitive locations
+    //animate area markers and cities to their respecitive locations (this is called when user has scrolled to the bottom of the page)
     animateCitiesAndAreas = function(){
         $( '#akershusMarker' ).animate({"top" : "620px", "left" : "376px"}, 2000);
         $( '#aust-agderMarker' ).animate({"top" : "690px", "left" : "290px"}, 1500);
@@ -143,7 +120,7 @@
            }
         });
 
-        //Scoll to bottom of page when arrow is clicked
+        //Scoll to bottom of the page when arrow is clicked
         $('#scrollButton').on('click', function (e,data) {
               $("html, body").animate({ scrollTop: $(document).height() }, "slow");
               return false;
@@ -202,6 +179,7 @@
                     }
                 }
 
+                //Get list of victims in selected area
                 var victimsInArea = [];
                 for(var i = 0; i < victims.length; i++){
                     if(area.indexOf(victims[i].area) > -1){
@@ -223,7 +201,7 @@
                 listHtml += '</ul>'
 
                 $('#victimsList').html(
-                    '<h3 id="areaHeader">' + areaName + '</h3>' + listHtml
+                    '<div id="victimsListContainer"><h3 id="areaHeader">' + areaName + '</h3>' + listHtml + '</div>'
                 );
 
                 $( '#victimsDiv' ).animate({"height" : "400px"}, 400);
@@ -232,16 +210,13 @@
             });
             
             $('#ageSlider').off().on('valuesChanged', function (e,data) {
-                fromAge = data.values.min;
-                toAge = data.values.max;
+                updateFilerValues(data);
                 updateAreas();
-                $('#ageSliderText').html(fromAge + ' - ' + toAge + ' år');
             });
             
             $("#ageSlider").bind("valuesChanging", function(e, data){
-              fromAge = data.values.min;
-                toAge = data.values.max;
-                $('#ageSliderText').html(fromAge + ' - ' + toAge + ' år');
+                updateFilerValues(data);
+                updateAreas();
             });
             
             $('#osloCheckbox').off().on('change', function (e) {
@@ -256,7 +231,14 @@
         
     }
     
-    //Set size of area markers depending on how many victims they have in comparison to current filter
+    //Update values in filter
+    var updateFilerValues = function(data){
+        fromAge = data.values.min;
+        toAge = data.values.max;
+        $('#ageSliderText').html(fromAge + ' - ' + toAge + ' år');
+    }
+    
+    //Set size of area markers depending on how many victims they have in comparison to current filter - called every time filter has changed
     var updateAreas = function(){
         var includeUtoya = $('#utoyaCheckbox').is(':checked');
         var includeOslo = $('#osloCheckbox').is(':checked'); 
@@ -269,7 +251,7 @@
                     if(fromAge <= victims[i].age && toAge >= victims[i].age){ //Checking age
                         if((includeOslo && ('oslo' == victims[i].found)) || (includeUtoya && ('utoya' == victims[i].found))) //Check utøya/regjeringskvartalet
                         {
-                                count++;
+                            count++;
                         }
                     }
                 }
