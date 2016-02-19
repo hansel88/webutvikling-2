@@ -113,7 +113,6 @@ body, html{
     margin-right: 50px;
 }
 
-
 #victimDetails{
     width: 40%;
     min-height: 100%;
@@ -182,12 +181,15 @@ body, html{
     width: 200px !important;
     display: inline;
 }
+
 .ui-rangeSlider .ui-rangeSlider-innerBar{
     height: 3px !important;
 }
+
 .ui-rangeSlider .ui-rangeSlider-bar{
     height: 1px !important;
 }
+
 .ui-rangeSlider .ui-rangeSlider-handle{
     height: 12px !important;
     width: 12px !important;
@@ -473,7 +475,7 @@ body, html{
     left: 176px;
 }
 #moIranaCity{
-    top: 700px;
+    top: 500px;
     left: 760px;
 }
 #namsosCity{

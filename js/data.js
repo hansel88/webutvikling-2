@@ -23,7 +23,6 @@ var DATA_MODULE = (function(){
         {"area": "Nordland",         "tag": "nordland",         "deadCount": 5}
     ]};
         
-        
     var victims = { list: [
       {
         "name"        : "Anne Lise Holter",

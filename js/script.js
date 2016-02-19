@@ -150,17 +150,22 @@
                $(this).next().css({"opacity" : 1});
                 
                 var area = $( this ).attr('id');
-                for(var i = 0; i < areas.length; i++){
-                    if(area.indexOf(areas[i].tag) > -1){
-                        $('#infoText').html('<h3>'+  areas[i].area +'</h3><p>' + areas[i].deadCount + ' omkomne</p>');
-                    }
-                }
+                
+                updateInfoText(area);
             });
 
             $( this ).mouseleave(function() {
                $(this).next().css({"opacity" : 0});
-                if (!detailsDivOpen)
-                    $('#infoText').html('<h3>Norge</h3><p>77 omkomne</p>');
+                if (!detailsDivOpen){
+                    var count = 0;
+                    for(var i = 0; i < victims.length; i++){
+                        if(fromAge <= victims[i].age && victims[i].age <= toAge){
+                             count++;  
+                        }
+                    }
+                }
+                
+                $('#infoText').html('<h3>Norge</h3><p>' + count + ' omkomne mellom ' + fromAge + ' og ' + toAge + ' år som døde ' + getDeadLocationText() +'</p>');
             });
             
             $(this).on('click', function (e,data) {
@@ -211,24 +216,76 @@
             
             $('#ageSlider').off().on('valuesChanged', function (e,data) {
                 updateFilerValues(data);
+                updateInfoText('');
                 updateAreas();
             });
             
             $("#ageSlider").bind("valuesChanging", function(e, data){
                 updateFilerValues(data);
+                updateInfoText('');
                 updateAreas();
             });
             
             $('#osloCheckbox').off().on('change', function (e) {
+                updateInfoText('');
                 updateAreas();
             });
 
             $('#utoyaCheckbox').off().on('change', function (e) {
+                console.log('ballefrans');
+                updateInfoText('');
                 updateAreas();
             });
 
         });
         
+    }
+    
+    var updateInfoText = function(area){
+        
+        var areaTag = '';
+        console.log('area: ', area);
+        if(area == ''){
+            areaTag = 'Norge';
+        }
+        else{
+            for(var i = 0; i < areas.length; i++){
+                if(area.indexOf(areas[i].tag) > -1){
+                    areaTag = areas[i].area;    
+                }
+            }
+        }
+
+        var includeUtoya = $('#utoyaCheckbox').is(':checked');
+        var includeOslo = $('#osloCheckbox').is(':checked'); 
+
+        var count = 0;
+        for(var i = 0; i < victims.length; i++){
+            if(fromAge <= victims[i].age && victims[i].age <= toAge){
+                if((includeUtoya && victims[i].found == 'utoya') || (includeOslo && victims[i].found == 'oslo'))
+                    if(areaTag == 'Norge' || (area.indexOf(victims[i].area) > -1)){ //area is correct
+                        count++; 
+                    } 
+            }
+        }
+        $('#infoText').html('<h3>'+  areaTag +'</h3><p>' + count + ' omkomne mellom ' + fromAge + ' og ' + toAge + ' år som døde ' + getDeadLocationText() + '</p>'); 
+    }
+    
+    var getDeadLocationText = function(){
+            var includeUtoya = $('#utoyaCheckbox').is(':checked');
+            var includeOslo = $('#osloCheckbox').is(':checked'); 
+
+            var deadLocationText = '';
+            if(includeOslo && includeUtoya){
+                deadLocationText = 'på Utøya eller i regjeringskvartalet';
+            }
+            else if(includeOslo){
+                deadLocationText = 'i regjeringskvartalet';
+            }
+            else{
+                deadLocationText = 'på Utøya';
+            }
+        return deadLocationText;
     }
     
     //Update values in filter
