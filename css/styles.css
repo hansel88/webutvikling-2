@@ -34,6 +34,10 @@ body, html{
     font-size: 1.3em;
 }
 
+#introTextP{
+    opacity: 0;
+}
+
 #mobileMessage{
     display: none;
     font-family: 'Source Sans Pro', sans-serif;
@@ -79,6 +83,7 @@ body, html{
     width: 20px;
     background-color: transparent;
     border: none;
+    opacity:0;
 }
 
 #scrollButton img{
