@@ -100,7 +100,7 @@
         
          $( ".areaImg" ).each(function() {
               $( this ).delay(2900).animate({"opacity" : "1"}, 3000);
-             $( this ).delay(200).animate({"opacity" : "0"}, 500);
+             $( this ).delay(200).animate({"opacity" : "0"}, 1000);
          });
     }
     
