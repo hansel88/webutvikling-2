@@ -341,12 +341,12 @@
     }
     
     var init = function(){
+        setEvents();
+        updateAreas();
         $( '#introTextP' ).delay(0).animate({"opacity" : "1"}, 4000);
         $( '#scrollButton' ).delay(3000).animate({"opacity" : "1"}, 500);
     }
 
-    setEvents();
-    updateAreas();
     init();
 
 })();
