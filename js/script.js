@@ -134,12 +134,6 @@
             $("html, body").animate({ scrollTop: $(document).height() }, "slow");
               return false;
         });
-        
-        //Close detail view from button
-       /* $('#closeVictimDiv').on('click', function (e,data) {
-            $( '#victimsDiv' ).animate({"height" : "0px"}, 400).hide(0);
-            detailsDivOpen = false;
-        });*/
 
         //Close detail view when clicking outside div (with a few exceptions, like area markers etc)
         $('#mapContainer').on('click', function (e,data) {
@@ -181,11 +175,11 @@
                 var areaName = '';
 
                 //Clear in case Aust-Agder (0 victims)
-                 $( '#victimImg' ).attr('src','');
+                $( '#victimImg' ).attr('src','');
                 $( '#victimImg' ).attr('alt','');
-                 $( '#victimHeader' ).text('');
-                 $( '#victimMeta' ).text('');
-                 $( '#victimText' ).text('');
+                $( '#victimHeader' ).text('');
+                $( '#victimMeta' ).text('');
+                $( '#victimText' ).text('');
 
                 for(var j = 0; j < areas.length; j++){
                     if(area.indexOf(areas[j].tag) > -1){
@@ -332,7 +326,7 @@
                     }
                 }
             }
-            var scaling = 0.5 + count / 11;
+            var scaling = 0.5 + (count * 1.1) / 11;
            $(this).css('transform', 'scale(' + scaling + ')');
         });
     }
