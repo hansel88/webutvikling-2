@@ -102,6 +102,9 @@
               $( this ).delay(2900).animate({"opacity" : "1"}, 3000);
              $( this ).delay(200).animate({"opacity" : "0"}, 1000);
          });
+        
+        $( '#infoText' ).delay(6500).animate({"opacity" : "1"}, 1000);
+        $( '#mapFilter' ).delay(6500).animate({"opacity" : "1"}, 1000);
     }
     
     var setEvents = function(){
