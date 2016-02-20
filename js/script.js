@@ -97,6 +97,11 @@
 
         $( '#hardbakkeCity' ).animate({"top" : "554px", "left" : "224px"}, 3000);
         $( '#egersundCity' ).animate({"top" : "702px", "left" : "244px"}, 2000);
+        
+         $( ".areaImg" ).each(function() {
+              $( this ).delay(2900).animate({"opacity" : "1"}, 3000);
+             $( this ).delay(200).animate({"opacity" : "0"}, 500);
+         });
     }
     
     var setEvents = function(){
