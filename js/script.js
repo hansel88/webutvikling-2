@@ -21,7 +21,7 @@
     };
 
     //animate area markers and cities to their respecitive locations (this is called when user has scrolled to the bottom of the page)
-    animateCitiesAndAreas = function(){
+    var animateCitiesAndAreas = function(){
         $( '#akershusMarker' ).animate({"top" : "620px", "left" : "376px"}, 2000);
         $( '#aust-agderMarker' ).animate({"top" : "690px", "left" : "290px"}, 1500);
         $( '#buskerudMarker' ).animate({"top" : "590px", "left" : "307px"}, 2000);
@@ -251,7 +251,6 @@
             });
 
             $('#utoyaCheckbox').off().on('change', function (e) {
-                console.log('ballefrans');
                 updateInfoText('');
                 updateAreas();
             });
@@ -261,9 +260,7 @@
     }
     
     var updateInfoText = function(area){
-        
         var areaTag = '';
-        console.log('area: ', area);
         if(area == ''){
             areaTag = 'Norge';
         }
@@ -343,6 +340,8 @@
     var init = function(){
         setEvents();
         updateAreas();
+        
+        //Fade in introtext and scrollbutton
         $( '#introTextP' ).delay(0).animate({"opacity" : "1"}, 4000);
         $( '#scrollButton' ).delay(3000).animate({"opacity" : "1"}, 500);
     }
